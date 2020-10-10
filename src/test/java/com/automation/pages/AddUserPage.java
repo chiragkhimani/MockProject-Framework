@@ -1,5 +1,7 @@
 package com.automation.pages;
 
+import java.util.Random;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +18,12 @@ public class AddUserPage extends BasePage {
 
 	@FindBy(id = "btnSave")
 	WebElement saveBtn;
+
+	@FindBy(xpath = "//input[@id='systemUser_userName']//following-sibling::span")
+	WebElement duplicateUserError;
+
+	@FindBy(xpath = "//input[@id='systemUser_confirmPassword']//following-sibling::span")
+	WebElement passwordMismatchError;
 
 	@FindBy(id = "systemUser_employeeName_empName")
 	WebElement employeeNameInput;
@@ -45,7 +53,7 @@ public class AddUserPage extends BasePage {
 
 	public void fillRequiredDetails() {
 		employeeNameInput.sendKeys(PropertyReader.getProperty("adduser.employeename"));
-		userNameInput.sendKeys(PropertyReader.getProperty("adduser.username"));
+		userNameInput.sendKeys(PropertyReader.getProperty("adduser.username") + random.nextInt(1000));
 		passswordInput.sendKeys(PropertyReader.getProperty("adduser.password"));
 		confirmPasswordInput.sendKeys(PropertyReader.getProperty("adduser.password"));
 	}
@@ -58,5 +66,31 @@ public class AddUserPage extends BasePage {
 	public void verifyAddUserSuccessMsg() {
 		CommonMethods.waitForElementToBePresent(successMsg);
 		Assert.assertTrue("Add user success message is not displayed", CommonMethods.isDisplayed(successMsg));
+	}
+
+	public void fillRequiredDetailsWithDuplicateUsername() {
+		employeeNameInput.sendKeys(PropertyReader.getProperty("adduser.employeename"));
+		userNameInput.sendKeys(PropertyReader.getProperty("admin.username"));
+		passswordInput.sendKeys(PropertyReader.getProperty("adduser.password"));
+		confirmPasswordInput.sendKeys(PropertyReader.getProperty("adduser.password"));
+	}
+
+	public void verifySaveBtnDisabled() {
+		Assert.assertTrue("Save button is still enabled", CommonMethods.isDisabled(saveBtn));
+	}
+
+	public void verifyDuplicateUsernameErrorMsg() {
+		Assert.assertTrue("Duplicate username error is not displayed", CommonMethods.isDisabled(duplicateUserError));
+	}
+
+	public void fillRequiredDetailsWithPasswordMismatch() {
+		employeeNameInput.sendKeys(PropertyReader.getProperty("adduser.employeename"));
+		userNameInput.sendKeys(PropertyReader.getProperty("adduser.username") + random.nextInt(1000));
+		passswordInput.sendKeys(PropertyReader.getProperty("adduser.password"));
+		confirmPasswordInput.sendKeys(PropertyReader.getProperty("admin.password"));
+	}
+
+	public void verifyPasswordMisMatchErroMsg() {
+		Assert.assertTrue("Password mismatch error is not displayed", CommonMethods.isDisabled(passwordMismatchError));
 	}
 }

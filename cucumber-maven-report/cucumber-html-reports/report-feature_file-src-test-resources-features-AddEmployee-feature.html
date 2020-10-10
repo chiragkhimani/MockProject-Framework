@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Automation</td>
               <td>1</td>
-            <td>09 Oct 2020, 07:34</td>
+            <td>10 Oct 2020, 07:10</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">This feature we created to test sign up functionality</td>
-                    <td      class="passed"    >13</td>
+                    <td      class="passed"    >10</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td class="total">13</td>
+          <td class="total">12</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="13280000000">13s 280ms</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="12286000000">12s 286ms</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
   </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">This feature we created to test sign up functionality</span>
   
@@ -188,14 +188,16 @@ $(document).ready(function() {
   
   
 <div class="tags indention">
-  </div>
+      <b>Tags:</b>
+           <a href="report-tag_wip.html">@wip</a>
+      </div>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify admin can create username</span>
+  <span class="name">validate error message for password mismatch</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -204,7 +206,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
         <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
@@ -225,7 +227,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.stepdef.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">6s 335ms</span>
+  <span class="lead-duration duration">6s 774ms</span>
 
           </div>
 
@@ -241,9 +243,9 @@ $(document).ready(function() {
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -253,14 +255,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user open orange hrm website</span>
   
-  <span class="lead-duration duration">3s 365ms</span>
+  <span class="lead-duration duration">3s 333ms</span>
 
   </div>
 
@@ -281,7 +283,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user login with admin access</span>
   
-  <span class="lead-duration duration">4s 052ms</span>
+  <span class="lead-duration duration">4s 352ms</span>
 
   </div>
 
@@ -302,7 +304,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">116ms</span>
+  <span class="lead-duration duration">122ms</span>
 
   </div>
 
@@ -323,7 +325,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user select admin menu</span>
   
-  <span class="lead-duration duration">1s 337ms</span>
+  <span class="lead-duration duration">1s 481ms</span>
 
   </div>
 
@@ -344,7 +346,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">select user management menu</span>
   
-  <span class="lead-duration duration">097ms</span>
+  <span class="lead-duration duration">075ms</span>
 
   </div>
 
@@ -365,7 +367,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">click on users tab</span>
   
-  <span class="lead-duration duration">603ms</span>
+  <span class="lead-duration duration">1s 370ms</span>
 
   </div>
 
@@ -386,7 +388,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on user listing page</span>
   
-  <span class="lead-duration duration">115ms</span>
+  <span class="lead-duration duration">097ms</span>
 
   </div>
 
@@ -407,7 +409,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user click on Add button</span>
   
-  <span class="lead-duration duration">821ms</span>
+  <span class="lead-duration duration">817ms</span>
 
   </div>
 
@@ -428,7 +430,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on add user page</span>
   
-  <span class="lead-duration duration">120ms</span>
+  <span class="lead-duration duration">149ms</span>
 
   </div>
 
@@ -447,9 +449,9 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">When</span>
-  <span class="name">user fills required details on add user page</span>
+  <span class="name">user fills required details with password mismatch on add user page</span>
   
-  <span class="lead-duration duration">522ms</span>
+  <span class="lead-duration duration">466ms</span>
 
   </div>
 
@@ -466,36 +468,32 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">click on save button</span>
-  
-  <span class="lead-duration duration">136ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Then</span>
-  <span class="name">verify add user success message is dispalyed</span>
+  <span class="name">verify save button is disabled</span>
   
-  <span class="lead-duration duration">1s 902ms</span>
+  <span class="lead-duration duration">024ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Error message</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>java.lang.AssertionError: Save button is still enabled
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.automation.pages.AddUserPage.verifySaveBtnDisabled(AddUserPage.java:79)
+	at com.automation.stepdef.AddUserSteps.verify_save_button_is_disabled(AddUserSteps.java:49)
+	at &#10045;.verify save button is disabled(file:///D:/MockProject/MockProject-Framework/src/test/resources/features/AddEmployee.feature:44)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -508,11 +506,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
-  <span class="name">verify user is on user listing page</span>
+  <span class="name">verify password mismatch error message is displayed</span>
   
-  <span class="lead-duration duration">094ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -533,7 +531,7 @@ $(document).ready(function() {
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -545,13 +543,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.stepdef.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">744ms</span>
+  <span class="lead-duration duration">697ms</span>
 
           </div>
 

@@ -56,4 +56,8 @@ public class CommonMethods {
 		select.selectByVisibleText(text);
 	}
 
+	public static boolean isDisabled(WebElement element) {
+		return !element.isEnabled();
+	}
+
 }
