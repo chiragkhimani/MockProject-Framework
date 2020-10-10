@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Automation</td>
+              <td>1</td>
+            <td>09 Oct 2020, 07:34</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.stepdef.AddUserSteps.click_on_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="136000000">136ms</td>
+              <td class="duration" data-value="136000000">136ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.AddUserSteps.user_fills_required_details_on_add_user_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="522000000">522ms</td>
+              <td class="duration" data-value="522000000">522ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.AddUserSteps.verify_add_user_success_message_is_dispalyed()</td>
+              <td>1</td>
+              <td class="duration" data-value="1902000000">1s 902ms</td>
+              <td class="duration" data-value="1902000000">1s 902ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.AddUserSteps.verify_user_is_on_add_user_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="120000000">120ms</td>
+              <td class="duration" data-value="120000000">120ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.HomeSteps.click_on_users_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="603000000">603ms</td>
+              <td class="duration" data-value="603000000">603ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.HomeSteps.select_user_management_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="97000000">097ms</td>
+              <td class="duration" data-value="97000000">097ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.HomeSteps.user_select_admin_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="1337000000">1s 337ms</td>
+              <td class="duration" data-value="1337000000">1s 337ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.HomeSteps.verify_user_is_on_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="116000000">116ms</td>
+              <td class="duration" data-value="116000000">116ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.Hooks.cleanUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="744000000">744ms</td>
+              <td class="duration" data-value="744000000">744ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.Hooks.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="6335000000">6s 335ms</td>
+              <td class="duration" data-value="6335000000">6s 335ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.LoginSteps.user_login_with_admin_access()</td>
+              <td>1</td>
+              <td class="duration" data-value="4052000000">4s 052ms</td>
+              <td class="duration" data-value="4052000000">4s 052ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.LoginSteps.user_open_orange_hrm_website()</td>
+              <td>1</td>
+              <td class="duration" data-value="3365000000">3s 365ms</td>
+              <td class="duration" data-value="3365000000">3s 365ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.UserListingSteps.user_click_on_Add_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="821000000">821ms</td>
+              <td class="duration" data-value="821000000">821ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.stepdef.UserListingSteps.verify_user_is_on_user_listing_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="209000000">209ms</td>
+              <td class="duration" data-value="104500000">104ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>15</td>
+            <td class="duration">20s 359ms</td>
+            <td class="duration">1s 357ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
