@@ -11,7 +11,6 @@ import io.cucumber.junit.CucumberOptions;
 				glue = "com.automation.stepdef",
 				monochrome = true,
 				strict = true,
-				tags = "@smoke",
 				plugin = { "json:target/cucumber.json"}
 		)
 

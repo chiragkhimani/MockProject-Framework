@@ -1,6 +1,6 @@
 Feature: This feature we created to test dropdowns
 
-  @smoke
+  @Smoke
   Scenario: Verify job dropdown list present in job dropdown menu
     Given user open orange hrm website
     When user login with admin access
