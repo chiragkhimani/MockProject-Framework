@@ -39,5 +39,10 @@ public class HomeSteps {
 	public void validate_list_of_dropdown_is_displayed_in_below_order(DataTable dataTable) {
 		homePage.verifyJobDropdownValues(dataTable);
 	}
+	
+	@Then("user open wix website")
+	public void userOpenWixWebsite() {
+		homePage.userOpenWixWebsite();
+	}
 
 }
