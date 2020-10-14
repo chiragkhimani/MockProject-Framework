@@ -72,4 +72,9 @@ public class HomePage extends BasePage {
 		}
 	}
 
+	public void userOpenWixWebsite() {
+		driver.get(
+				"https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site");
+	}
+
 }
