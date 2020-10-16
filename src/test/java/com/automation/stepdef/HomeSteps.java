@@ -52,4 +52,19 @@ public class HomeSteps {
 }
 
 
+	@When("hover mouse on job menu")
+	public void hover_mouse_on_job_menu() {
+		homePage.hoverMouseOnJobMenu();
+	}
+
+	@Then("validate list of dropdown is displayed in below order")
+	public void validate_list_of_dropdown_is_displayed_in_below_order(DataTable dataTable) {
+		homePage.verifyJobDropdownValues(dataTable);
+	}
+	
+	@Then("user open wix website")
+	public void userOpenWixWebsite() {
+		homePage.userOpenWixWebsite();
+	}
+
 }

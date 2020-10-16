@@ -11,7 +11,10 @@ import io.cucumber.junit.CucumberOptions;
 				glue = "com.automation.stepdef",
 				monochrome = true,
 				strict = true,
+<<<<<<< HEAD
 				tags="@wip",
+=======
+>>>>>>> fae1e18ca313a764e8e7b9244d4ee3592f41099a
 				plugin = { "json:target/cucumber.json"}
 		)
 
