@@ -1,12 +1,17 @@
 package com.automation.pages;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automation.utility.CommonMethods;
 import com.automation.utility.DriverUtils;
+
+import io.cucumber.datatable.DataTable;
 
 public class HomePage extends BasePage {
 
@@ -21,6 +26,13 @@ public class HomePage extends BasePage {
 
 	@FindBy(id = "menu_admin_viewSystemUsers")
 	WebElement userTab;
+	
+	@FindBy(id= "menu_admin_Job" )
+	WebElement jobMenu;
+	
+	@FindBy(xpath = "//a[@id='menu_admin_Job']/../ul/li/a")
+	List<WebElement> jobDropdownValues;
+	
 
 	public HomePage() {
 		driver = DriverUtils.getDriver();
@@ -43,6 +55,27 @@ public class HomePage extends BasePage {
 
 	public void selectUserTab() {
 		userTab.click();
+	}
+
+	public void hoverMouseOnJobMenu() {
+		Actions action = new Actions(driver);
+		action.moveToElement(jobMenu).perform();
+		
+	}
+
+	public void verifyJobDropdownValues(DataTable dataTable) {	
+		List<String> expValues = dataTable.asList();
+		
+		for(int i = 0; i < expValues.size(); i++) {
+			String expValue = expValues.get(i);
+			String actValue = jobDropdownValues.get(i).getText();
+			System.out.println(expValue);
+			System.out.println(actValue);
+			Assert.assertTrue("Expected- " + expValue + " actual-" + actValue, expValue.equalsIgnoreCase(actValue));
+			
+			
+			
+		}
 	}
 
 }
