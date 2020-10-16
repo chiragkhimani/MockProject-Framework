@@ -1,6 +1,5 @@
 Feature: This feature we created to test dropdowns
-<<<<<<< HEAD
- 
+
  @smoke
  Scenario: Verify job dropdown list present in job dropdown menu
  
@@ -12,10 +11,9 @@ Feature: This feature we created to test dropdowns
   Then validate list of dropdown is present in below order
     |Job Titles        |
     |Pay Grades        | 
-    |Employment Status|
+    |Employment Status |
     |Job Categories    |
     |Work Shifts       |
-=======
 
   @Smoke
   Scenario: Verify job dropdown list present in job dropdown menu
@@ -30,4 +28,4 @@ Feature: This feature we created to test dropdowns
       | Employment Status |
       | Job Categories    |
       | Work Shifts       |
->>>>>>> fae1e18ca313a764e8e7b9244d4ee3592f41099a
+
