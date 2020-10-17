@@ -26,13 +26,6 @@ public class HomePage extends BasePage {
 
 	@FindBy(id = "menu_admin_viewSystemUsers")
 	WebElement userTab;
-	
-	@FindBy(id= "menu_admin_Job" )
-	WebElement jobMenu;
-	
-	@FindBy(xpath = "//a[@id='menu_admin_Job']/../ul/li/a")
-	List<WebElement> jobDropdownValues;
-	
 
 	@FindBy(id = "menu_admin_Job")
 	WebElement jobMenu;
@@ -66,34 +59,16 @@ public class HomePage extends BasePage {
 	public void hoverMouseOnJobMenu() {
 		Actions action = new Actions(driver);
 		action.moveToElement(jobMenu).perform();
-<<<<<<< HEAD
-		
-	}
-
-	public void verifyJobDropdownValues(DataTable dataTable) {	
-		List<String> expValues = dataTable.asList();
-		
-		for(int i = 0; i < expValues.size(); i++) {
-=======
 	}
 
 	public void verifyJobDropdownValues(DataTable dataTable) {
 		List<String> expValues = dataTable.asList();
 		for (int i = 0; i < expValues.size(); i++) {
->>>>>>> fae1e18ca313a764e8e7b9244d4ee3592f41099a
 			String expValue = expValues.get(i);
 			String actValue = jobDropdownValues.get(i).getText();
 			System.out.println(expValue);
 			System.out.println(actValue);
 			Assert.assertTrue("Expected- " + expValue + " actual-" + actValue, expValue.equalsIgnoreCase(actValue));
-<<<<<<< HEAD
-			
-			
-			
-		}
-	}
-
-=======
 		}
 	}
 
@@ -102,5 +77,4 @@ public class HomePage extends BasePage {
 				"https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site");
 	}
 
->>>>>>> fae1e18ca313a764e8e7b9244d4ee3592f41099a
 }
